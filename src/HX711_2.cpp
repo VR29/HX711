@@ -91,9 +91,9 @@ void HX711_2::begin(byte dout, byte dout2, byte pd_sck, byte pd_sck2, byte gain,
   DOUT = dout;
   DOUT2 = dout2;
 
-  pinMode(PD_SCK, sck_mode);
+  pinMode(PD_SCK, OUTPUT_OPEN_DRAIN);
   if (PD_SCK2 != 255)
-    pinMode(PD_SCK2, sck_mode);
+    pinMode(PD_SCK2, OUTPUT_OPEN_DRAIN);
   pinMode(DOUT, DOUT_MODE);
   pinMode(DOUT2, DOUT_MODE);
 
